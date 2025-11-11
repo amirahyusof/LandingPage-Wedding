@@ -1,40 +1,51 @@
 import React from "react";
-import { 
-    FaFacebookSquare, 
-    FaInstagramSquare, 
-    FaTwitterSquare,
-    FaPhoneAlt
+import {
+  FaFacebookSquare,
+  FaInstagramSquare,
+  FaTwitterSquare,
+  FaPhoneAlt,
+} from "react-icons/fa";
+import { MdOutlineEmail } from "react-icons/md";
 
- } from "react-icons/fa";
- import { MdOutlineEmail } from "react-icons/md";
-
-function Footer(){
-    return(
-        <div className="w-full mx-auto py-6 px-4 bg-[rgb(255,248,227)]">
-            <div className=" md:grid md:grid-cols-2 md:gap-[15%] my-4">
-                <div className="flex justify-between mt-[30px] mx-[20px] lg:mx-[100px]">
-                <FaFacebookSquare size={35} style={{color: '#E6A4B4'}} />
-                <FaInstagramSquare size={35} style={{color: '#E6A4B4'}} />
-                <FaTwitterSquare size={35} style={{color: '#E6A4B4'}} />
-                </div>
-            
-            
-                <div className="flex flex-col ml-[20px] mt-2 lg:ml-[20%]">
-                    <div className="text-center mt-[10px]">
-                        <MdOutlineEmail size={30} style={{color: '#E6A4B4'}} />
-                        <p className="mt-[-25px] ml-[-15%] sm:ml-[-50%] md:ml-[-5%] lg:ml-[-20%]">timelessElegance@studio.com</p>
-                    </div>
-                    <div className="text-center my-4">
-                        <FaPhoneAlt size={25} style={{color: '#E6A4B4'}} />
-                        <p className="mt-[-20px] ml-[-50%] sm:ml-[-68%] md:ml-[-40%] lg:ml-[-50%]">+604-1234567</p>
-                    </div>
-                </div>
-
-            </div>
-            <p className="text-center">©All right reserved</p>
+function Footer() {
+  return (
+    <footer className="w-full bg-[#FFF8E3] text-[#E6A4B4] py-10 px-6">
+      <div className="max-w-[1240px] mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+        {/* Social Icons */}
+        <div className="flex space-x-6">
+          <FaFacebookSquare
+            size={32}
+            className="hover:scale-110 transition text-[#E6A4B4]"
+          />
+          <FaInstagramSquare
+            size={32}
+            className="hover:scale-110 transition text-[#E6A4B4]"
+          />
+          <FaTwitterSquare
+            size={32}
+            className="hover:scale-110 transition text-[#E6A4B4]"
+          />
         </div>
-       
-    )
+
+        {/* Contact Info */}
+        <div className="text-center md:text-left space-y-3">
+          <div className="flex items-center justify-center md:justify-start gap-3">
+            <MdOutlineEmail size={24} />
+            <p className="text-gray-700">timelessElegance@studio.com</p>
+          </div>
+          <div className="flex items-center justify-center md:justify-start gap-3">
+            <FaPhoneAlt size={20} />
+            <p className="text-gray-700">+604-1234567</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom Text */}
+      <p className="text-center text-gray-500 mt-8 text-sm">
+        © {new Date().getFullYear()} All Rights Reserved — Elegance Studio
+      </p>
+    </footer>
+  );
 }
 
 export default Footer;

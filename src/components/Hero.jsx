@@ -1,19 +1,30 @@
-import React from "react";
+
 import heroImage from "../assets/hero.jpg";
 
+function Hero() {
+  return (
+    <section
+      id="home"
+      className="relative flex items-center justify-center text-center text-white h-[700px] bg-cover bg-center"
+      style={{ backgroundImage: `url(${heroImage})` }}
+    >
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/40"></div>
 
-function Hero(){
-
-    return(
-        <div className="max-w-full text-white mt-[5%]" id="home">
-            <div className="bg-cover bg-center max-w-full h-[700px] mt-[-96px] w-full text-center flex flex-col justify-center"
-             style={{ backgroundImage: `url(${heroImage})` }} >
-                <h1 className="text-5xl mt-[30%] md:mt-[10%] font-bold md:text-7xl md:py-6 lg:px-[15%]">Capturing Timeless Memories of Your Special Day</h1>
-                <p className="text-xl p-2 mt-[30px]">Preserving cherished moments with artful photography, we capture the essence of your love story, ensuring timeless memories of your special day.</p>
-                <button className="w-[150px] bg-[#F5EEE6] text-l uppercase text-[#E6A4B4] rounded-md my-4 py-2 mx-auto hover:bg-[#F3D7CA] hover:text-white">Book with us</button>
-            </div>
-        </div>
-    )
+      <div className="relative z-10 max-w-3xl px-6">
+        <h1 className="text-4xl md:text-6xl font-bold leading-tight drop-shadow-md">
+          Capturing Timeless Memories of Your Special Day
+        </h1>
+        <p className="text-lg md:text-xl mt-6 drop-shadow-sm">
+          Preserving cherished moments with artful photography — capturing the
+          essence of your love story for eternity.
+        </p>
+        <button className="mt-8 bg-[#F5EEE6] text-[#E6A4B4] uppercase tracking-wide px-6 py-3 rounded-lg font-semibold hover:bg-[#F3D7CA] hover:text-white transition-all">
+          Book with us
+        </button>
+      </div>
+    </section>
+  );
 }
 
 export default Hero;

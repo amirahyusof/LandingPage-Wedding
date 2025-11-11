@@ -1,20 +1,30 @@
+import contactImage from "../assets/contact.jpg";
 
-import contactImage from '../assets/contact.jpg';
+function Contact() {
+  return (
+    <section id="contact" className="w-full bg-[#E6A4B4] text-white py-16">
+      <div className="max-w-[1240px] mx-auto flex flex-col lg:flex-row items-center gap-10 px-6">
+        {/* Image */}
+        <img
+          src={contactImage}
+          alt="Wedding contact"
+          className="w-[360px] md:w-[480px] lg:w-[520px] rounded-3xl shadow-lg"
+        />
 
-function Contact(){
-    return(
-        <div className="w-full text-white py-10" id="contact" >
-            <div className="flex flex-col lg:flex-row m-auto p-10">
-                <img className="w-[380px] lg:w-[500px] mx-auto rounded-3xl" src={contactImage} alt="" />
-
-                <div className="py-8 text-center mx-auto">
-                    <h3 className="text-2xl text-bold uppercase lg:mt-16">Love our work?</h3>
-                    <p className="py-4 lg:py-0 font-medium">Find out if we're available for you date and get all questions answered.</p>
-                    <button className="w-[150px] bg-[#F5EEE6] text-l uppercase text-[#E6A4B4] rounded-md my-4 py-2  hover:bg-[#F3D7CA] hover:text-white">Contact Us</button>
-                </div>
-            </div>
+        {/* Text & Button */}
+        <div className="text-center lg:text-left space-y-4">
+          <h3 className="text-3xl font-bold uppercase">Love Our Work?</h3>
+          <p className="text-lg leading-relaxed text-white/90">
+            Find out if we're available for your date and get all your questions
+            answered. Let’s create something beautiful together.
+          </p>
+          <button className="bg-[#F5EEE6] text-[#E6A4B4] font-semibold uppercase px-6 py-3 rounded-md shadow-md hover:bg-[#F3D7CA] hover:text-white transition-all">
+            Contact Us
+          </button>
         </div>
-    )
+      </div>
+    </section>
+  );
 }
 
 export default Contact;

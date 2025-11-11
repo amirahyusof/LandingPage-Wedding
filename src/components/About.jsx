@@ -1,40 +1,54 @@
-import React from "react";
+
 import aboutImage01 from "../assets/about.jpg";
 import aboutImage02 from "../assets/photo.jpg";
 
-function About(){
-    return (
-        <div className="w-full bg-[#F3D7CA] py-16 px-4"  id="about">
-            <h2 className="text-2xl font-bold py-2 md:text-4xl sm:text-3xl">Crafting Timeless Memories: Your Story Behind the Lens</h2>
-            <div className="max-w-[1240px] mx-auto px-2 grid grid-cols-2 grid-rows-1 gap-4" >
-            <img className="w-[400px] mx-auto my-4 rounded-3xl" src={aboutImage01} alt="/" />
-            <img className="w-[350px] lg:w-[450px] lg:h-[270px] lg:ml-[20px] mx-auto my-4 rounded-3xl" src={aboutImage02} alt="/" />
-            </div>
-           
+function About() {
+  return (
+    <section id="about" className="w-full bg-[#F3D7CA] py-20 px-4 text-center">
+      <h2 className="text-3xl md:text-4xl font-bold text-[#E6A4B4] mb-10">
+        Crafting Timeless Memories: Your Story Behind the Lens
+      </h2>
 
-            <div  className="max-w-[1240px] mx-auto text-justify text-medium grid md:grid-cols-3">
-                <div className="m-4 px-2">
-                    <h3 className="text-[#FF407D] text-bold">Unlocking the Essence of Your Love Story</h3>
-                    <p>Embark on a journey where every glance, every touch, and every smile narrates a story of love eternal. 
-                    Our photography style blends artistry and authenticity, capturing the raw emotions and intricate details that define your special day.</p>
-                </div>
+      {/* Images */}
+      <div className="max-w-[1240px] mx-auto grid md:grid-cols-2 gap-6 mb-12">
+        <img
+          src={aboutImage01}
+          alt="Wedding moment"
+          className="w-full max-w-[400px] mx-auto rounded-3xl shadow-lg"
+        />
+        <img
+          src={aboutImage02}
+          alt="Photography detail"
+          className="w-full max-w-[450px] mx-auto rounded-3xl shadow-lg"
+        />
+      </div>
 
-                <div className="m-4 px-2">
-                    <h3 className="text-[#FF407D] text-bold">From Heart to Lens:</h3>
-                    <p>We believe that behind every photograph lies a cherished memory waiting to be unveiled. 
-                    Our passion lies in freezing these fleeting moments, immortalizing the essence of your love story with each click of the shutter.</p>
-                </div>
-
-                <div className="m-4 px-2">
-                    <h3 className="text-[#FF407D] text-bold">Meet the Artist:</h3>
-                    <p>With a decade of experience in wedding photography, we can brings a unique blend of creativity and technical expertise to every shoot. 
-                    Trained in the art of storytelling through imagery, we has honed a signature style that resonates with couples seeking timeless elegance and emotional depth in their wedding photos.</p>
-                </div>
-            </div>
-            
-        </div>
-
-    )
+      {/* Text */}
+      <div className="max-w-[1240px] mx-auto grid md:grid-cols-3 gap-6 text-left">
+        {[
+          {
+            title: "Unlocking the Essence of Your Love Story",
+            text: `Embark on a journey where every glance, every touch, and every smile narrates a story of love eternal. Our photography style blends artistry and authenticity, capturing the raw emotions that define your special day.`,
+          },
+          {
+            title: "From Heart to Lens",
+            text: `Behind every photograph lies a cherished memory waiting to be unveiled. Our passion lies in freezing these fleeting moments, immortalizing your love story with every click of the shutter.`,
+          },
+          {
+            title: "Meet the Artist",
+            text: `With a decade of experience in wedding photography, we bring creativity and technical mastery to every shoot. Our storytelling through imagery reflects timeless elegance and emotional depth.`,
+          },
+        ].map((item) => (
+          <div key={item.title} className="bg-white/60 rounded-xl p-6 shadow-sm">
+            <h3 className="text-[#FF407D] font-semibold mb-3">
+              {item.title}
+            </h3>
+            <p className="text-gray-700 leading-relaxed">{item.text}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
 }
 
 export default About;
