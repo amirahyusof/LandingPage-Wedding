@@ -1,70 +1,109 @@
-# Getting Started with Create React App
+# 💒 Elegance Studio — Wedding Photography Landing Page
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A beautifully crafted, pastel-inspired **wedding photography landing page** built with **React**, **Vite**, and **Tailwind CSS v4**.  
+This project emphasizes soft elegance, romantic tones, and a clean user experience — perfect for showcasing photography, studio services, or creative portfolios.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🌷 Features
 
-### `npm start`
+- 🎀 **Responsive design** — fully optimized for mobile, tablet, and desktop
+- 🎞️ **Smooth scroll animations** powered by Framer Motion
+- 🩰 **Elegant pastel color palette** (soft pinks & cream tones)
+- 💍 **Hero section with background image overlay**
+- 🌸 **About section** with storytelling layout
+- 💎 **Service Packages section** with pricing cards
+- 📸 **Gallery (Collections)** with responsive photo grids
+- 💌 **Booking section** with form input
+- 💐 **Contact & Footer sections** with social icons and info
+- ⚡ **Vite + React setup** for fast development and build times
+- 🧵 **TailwindCSS v4** for modern utility-first styling
+- ☁️ **Netlify-ready** deployment setup
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🪄 Tech Stack
 
-### `npm test`
+| Layer | Technology |
+|-------|-------------|
+| Frontend Framework | React 18 + Vite |
+| Styling | Tailwind CSS v4 |
+| Animation | Framer Motion |
+| Icons | React Icons |
+| Deployment | Netlify |
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## ⚙️ Getting Started
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 1. Clone the Repository
+```bash
+git clone https://github.com/yourusername/landingpage-wedding.git
+cd landingpage-wedding
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 2. Install Dependencies
+npm install
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 3. Run Development Server
+```bash
+npm run dev
+```
+The app will run at http://localhost:5173/
 
-### `npm run eject`
+### 4. Build for Production
+```bash
+npm run build
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 5.Preview Production Build
+```bash
+npm run preview
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 💫 Deployment (Netlify)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+If you deploy to Netlify, use these settings:
+- Build command: npm run build
+- Publish directory: dist
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Or add a netlify.toml file:
+```bash
+[build]
+  command = "npm run build"
+  publish = "dist"
 
-## Learn More
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🧁 Folder Structure
+src/
+├── assets/              # Images (hero, collections, etc.)
+├── components/          # All React sections (Navbar, Hero, About, etc.)
+│   ├── Navbar.jsx
+│   ├── Hero.jsx
+│   ├── About.jsx
+│   ├── Service.jsx
+│   ├── Collections.jsx
+│   ├── Booking.jsx
+│   ├── Contact.jsx
+│   └── Footer.jsx
+├── index.css            # Tailwind entry
+├── main.jsx             # App entry point
+└── App.jsx              # Component wrapper
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+## 🌸 Credits
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Designed & Developed by: Amirah Yusof
 
-### Analyzing the Bundle Size
+Inspiration: Soft pastel bridal themes and modern photography studios
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Built with love 💕 using React + Tailwind
 
-### Making a Progressive Web App
+## 📜 License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+This project is licensed under the MIT License — feel free to customize and use it for your own portfolio, client work, or product demos.
 
-### Advanced Configuration
+## 🌷 Preview
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Live Demo: https://landingpage-weddingportfolio.netlify.app/
