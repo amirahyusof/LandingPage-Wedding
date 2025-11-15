@@ -25,7 +25,7 @@ function Collections() {
           <img
             src={Collection01}
             alt="Wedding portrait"
-            className="h-[180px] sm:h-[280px] md:h-[320px] lg:h-[360px] w-full rounded-2xl object-cover shadow-md hover:opacity-90 transition"
+            className="h-[180px] sm:h-[280px] md:h-80 lg:h-[360px] w-full rounded-2xl object-cover shadow-md hover:opacity-90 transition"
           />
         </div>
 
@@ -36,7 +36,7 @@ function Collections() {
               key={i}
               src={img}
               alt={`Wedding ${i}`}
-              className="h-[160px] sm:h-[260px] md:h-[320px] w-full rounded-2xl object-cover shadow-md hover:opacity-90 transition"
+              className="h-40 sm:h-[260px] md:h-80 w-full rounded-2xl object-cover shadow-md hover:opacity-90 transition"
             />
           ))}
         </div>
