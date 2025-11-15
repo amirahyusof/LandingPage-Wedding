@@ -16,9 +16,9 @@ function Contact() {
           <h3 className="text-3xl font-bold uppercase">Love Our Work?</h3>
           <p className="text-lg leading-relaxed text-white/90">
             Find out if we're available for your date and get all your questions
-            answered. Let’s create something beautiful together.
+            answered. 
           </p>
-          <button className="bg-[#F5EEE6] text-[#E6A4B4] font-semibold uppercase px-6 py-3 rounded-md shadow-md hover:bg-[#F3D7CA] hover:text-white transition-all">
+          <button className="bg-[#F5EEE6] text-[#E6A4B4] font-semibold uppercase px-6 py-3 rounded-full shadow-md hover:bg-[#F3D7CA] hover:text-white transition-all">
             Contact Us
           </button>
         </div>
