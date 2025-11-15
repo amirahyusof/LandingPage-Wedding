@@ -1,49 +1,41 @@
-import React from "react";
+
 import {
-  FaFacebookSquare,
-  FaInstagramSquare,
-  FaTwitterSquare,
-  FaPhoneAlt,
+  FaFacebookF as Facebook,
+  FaInstagram as Instagram,
+  FaTwitter as Twitter,
+  FaEnvelope as Mail,
+  FaPhoneAlt as Phone,
 } from "react-icons/fa";
-import { MdOutlineEmail } from "react-icons/md";
 
 function Footer() {
   return (
-    <footer className="w-full bg-[#FFF8E3] text-[#E6A4B4] py-10 px-6">
-      <div className="max-w-[1240px] mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
-        {/* Social Icons */}
-        <div className="flex space-x-6">
-          <FaFacebookSquare
-            size={32}
-            className="hover:scale-110 transition text-[#E6A4B4]"
-          />
-          <FaInstagramSquare
-            size={32}
-            className="hover:scale-110 transition text-[#E6A4B4]"
-          />
-          <FaTwitterSquare
-            size={32}
-            className="hover:scale-110 transition text-[#E6A4B4]"
-          />
-        </div>
+    <footer className=" bg-[#FFF8E3] text-[#E6A4B4] py-12">
+      <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="flex justify-center gap-6">
+              {[Facebook, Instagram, Twitter].map((Icon, idx) => (
+                <div key={idx} className="w-12 h-12 bg-[#E6A4B4] rounded-full flex items-center justify-center hover:scale-110 transition-transform cursor-pointer">
+                  <Icon className="w-6 h-6 text-white" />
+                </div>
+              ))}
+            </div>
 
-        {/* Contact Info */}
-        <div className="text-center md:text-left space-y-3">
-          <div className="flex items-center justify-center md:justify-start gap-3">
-            <MdOutlineEmail size={24} />
-            <p className="text-gray-700">timelessElegance@studio.com</p>
+            <div className="space-y-4 text-center md:text-left">
+              <div className="flex items-center justify-center md:justify-start gap-3">
+                <Mail className="w-6 h-6 text-[#E6A4B4]" />
+                <span className="text-gray-700">timelessElegance@studio.com</span>
+              </div>
+              <div className="flex items-center justify-center md:justify-start gap-3">
+                <Phone className="w-6 h-6 text-[#E6A4B4]" />
+                <span className="text-gray-700">+604-1234567</span>
+              </div>
+            </div>
           </div>
-          <div className="flex items-center justify-center md:justify-start gap-3">
-            <FaPhoneAlt size={20} />
-            <p className="text-gray-700">+604-1234567</p>
+
+          <div className="text-center mt-8 text-gray-600">
+             © {new Date().getFullYear()} All Rights Reserved — Elegance Studio
           </div>
         </div>
-      </div>
-
-      {/* Bottom Text */}
-      <p className="text-center text-gray-500 mt-8 text-sm">
-        © {new Date().getFullYear()} All Rights Reserved — Elegance Studio
-      </p>
     </footer>
   );
 }
